@@ -1,24 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import Hero from '../components/Home/Hero';
-import Phones from '../components/Phones/Phones';
+import React, { useEffect, useState } from "react";
+import Hero from "../components/Home/Hero";
+import Phones from "../components/Phones/Phones";
 
 const Home = () => {
+  const [phones, setPhones] = useState([]);
 
-    const [phones, setPhones] = useState([]);
-
-
-    useEffect(() => {
-        fetch(`phoneData.json`)
-            .then(res => res.json())
-            .then(data => setPhones(data))
-    }, [])
-    console.log(phones)
-    return (
-        <>
-            <Hero />
-            <Phones phones={phones} />
-        </>
-    );
+  useEffect(() => {
+    fetch(`phoneData.json`)
+      .then((res) => res.json())
+      .then((data) => setPhones(data));
+  }, []);
+  console.log(phones);
+  return (
+    <>
+      <Hero setPhones={setPhones} phones={phones} />
+      <Phones phones={phones} />
+    </>
+  );
 };
 
 export default Home;
