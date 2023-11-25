@@ -2,24 +2,18 @@ import React, { useRef } from "react";
 
 const Hero = ({ phones, setPhones }) => {
   const searchref = useRef();
-
   const handleSubmit = () => {
     const search = searchref?.current?.value.toLowerCase();
-
     const filterData = phones.filter((item) =>
       item.phone_name.toLowerCase().includes(search)
     );
-
     if (filterData.length > 0) {
       console.log(filterData);
       setPhones(filterData);
     } else {
       alert("inVaalid search");
     }
-
-    // console.log();
   };
-
   return (
     <div
       className="hero min-h-screen bg-top"
@@ -41,7 +35,7 @@ const Hero = ({ phones, setPhones }) => {
               ref={searchref}
               defaultValue={""}
               type="text"
-              placeholder="Search recipies by category"
+              placeholder="Search  by your favorite Phone Name"
               className="input input-bordered w-full pr-16"
             />
             <button
