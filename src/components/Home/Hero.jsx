@@ -19,9 +19,9 @@ const Hero = ({ phones, setPhones }) => {
       className="hero min-h-screen bg-top"
       style={{
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1549590143-d5855148a9d5)",
+          "url(https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
       }}>
-      <div className="hero-overlay bg-white bg-opacity-80 "></div>
+      <div className="hero-overlay bg-white bg-opacity-70 "></div>
       <div className="hero-content text-center ">
         <div className="max-w-9/12">
           <h1 className="mb-5 text-5xl font-bold">Welcome To Mobile Bazar</h1>
