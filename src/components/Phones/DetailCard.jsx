@@ -6,9 +6,7 @@ const DetailCard = ({ phone }) => {
     const { brand_name, id, image, phone_name, price, rating } = phone || {};
 
     const handleToFavorite = () => {
-
         const addedFavoritesArray = [];
-
         const favoriteItems = JSON.parse(localStorage.getItem('favorites'));
         if (!favoriteItems) {
             addedFavoritesArray.push(phone);
@@ -37,11 +35,6 @@ const DetailCard = ({ phone }) => {
             }
         }
         console.log(favoriteItems)
-
-
-
-
-
     }
 
 

@@ -6,34 +6,36 @@ import Login from "../Pages/Login";
 import Phones from "../components/Phones/Phones";
 import ErrorPage from "../Pages/ErrorPage";
 import PhoneDetails from "../components/Phones/PhoneDetails";
-
-
-
+import Register from "../Pages/Register";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout />,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                path: '/',
-                element: <Home />
-            },
-            {
-                path: '/favorite',
-                element: <Favorite />
-            },
-            {
-                path: '/phones/:id',
-                element: <PhoneDetails />,
-                loader: () => fetch(`/phoneData.json`)
-            },
-            {
-                path: '/login',
-                element: <Login />
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/favorite",
+        element: <Favorite />,
+      },
+      {
+        path: "/phones/:id",
+        element: <PhoneDetails />,
+        loader: () => fetch(`/phoneData.json`),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+    ],
+  },
+]);
 export default router;

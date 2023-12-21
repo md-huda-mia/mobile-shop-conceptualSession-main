@@ -10,7 +10,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setPhones(data));
   }, []);
-  console.log(phones);
+  // console.log(phones);
   return (
     <>
       <Hero setPhones={setPhones} phones={phones} />
